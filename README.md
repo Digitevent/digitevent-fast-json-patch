@@ -1,4 +1,4 @@
-JSON-Patch
+Fork of JSON-Patch for use it with mongoose object
 ===============
 
 > A leaner and meaner implementation of JSON-Patch. Small footprint. High performance.
@@ -333,7 +333,7 @@ Functions `applyPatch`, `applyOperation`, and `validate` accept a `validate`/ `v
 If you pass a validator, it will be called with four parameters for each operation, `function(operation, index, tree, existingPath)` and it is expected to throw `JsonPatchError` when your conditions are not met.
 
 - `operation` The operation it self.
-- `index` `operation`'s index in the patch array (if application).  
+- `index` `operation`'s index in the patch array (if application).
 - `tree` The object that is supposed to be patched.
 - `existingPath` the path `operation` points to.
 
