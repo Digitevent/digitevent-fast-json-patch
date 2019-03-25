@@ -1,8 +1,8 @@
 {
-  "name": "fast-json-patch",
+  "name": "digitevent-fast-json-patch",
   "version": "2.0.7",
-  "description": "Fast implementation of JSON-Patch (RFC-6902) with duplex (observe changes) capabilities",
-  "homepage": "https://github.com/Starcounter-Jack/JSON-Patch",
+  "description": "Fast implementation of JSON-Patch (RFC-6902) with duplex (observe changes) capabilities for digitevent use",
+  "homepage": "https://www.digitevent.com",
   "keywords": [
     "json",
     "patch",
@@ -11,15 +11,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/Starcounter-Jack/JSON-Patch.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Starcounter-Jack/JSON-Patch/issues"
+    "url": "git://github.com/Digitevent/JSON-Patch.git"
   },
   "author": {
-    "name": "Joachim Wester",
-    "email": "joachimwester@me.com",
-    "url": "http://www.starcounter.com/"
+    "name": "Enzo Gain",
+    "email": "enzo@digitevent.com",
+    "url": "https://www.digitevent.com"
   },
   "license": "MIT",
   "main": "lib/duplex.js",

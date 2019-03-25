@@ -259,7 +259,16 @@ var objOps = {
     },
     remove: function (obj, key, document) {
         var removed = obj[key];
-        delete obj[key];
+        // When applied patch on mongoose object, when want to remove property _id,
+        // delete does not work
+        // We have to call native function of mongoose
+        // model.set(key, undefined) in order to delete to property
+        if (typeof obj.set === "function") {
+            obj.set(key, undefined);
+        }
+        else {
+            delete obj[key];
+        }
         return { newDocument: document, removed: removed };
     },
     replace: function (obj, key, document) {
