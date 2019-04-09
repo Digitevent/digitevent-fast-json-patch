@@ -283,7 +283,12 @@ var objOps = {
     },
     replace: function (obj, key, document) {
         var removed = obj[key];
-        obj[key] = this.value;
+        if (typeof obj.set === "function") {
+            obj.set(key, this.value);
+        }
+        else {
+            obj[key] = this.value;
+        }
         return { newDocument: document, removed: removed };
     },
     move: function (obj, key, document) {
@@ -330,7 +335,12 @@ var arrOps = {
     },
     replace: function (arr, i, document) {
         var removed = arr[i];
-        arr[i] = this.value;
+        if (typeof arr.set === "function") {
+            arr.set(i, this.value);
+        }
+        else {
+            arr[i] = this.value;
+        }
         return { newDocument: document, removed: removed };
     },
     move: objOps.move,
