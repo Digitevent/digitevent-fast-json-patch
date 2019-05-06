@@ -103,11 +103,7 @@ const objOps = {
   },
   replace: function (obj, key, document) {
     var removed = obj[key];
-    if(typeof obj.set === "function") {
-      obj.set(key, this.value);
-    } else {
-      obj[key] = this.value;
-    }
+    obj[key] = this.value;
     return { newDocument: document, removed };
   },
   move: function (obj, key, document) {
@@ -164,11 +160,7 @@ var arrOps = {
   },
   replace: function (arr, i, document) {
     var removed = arr[i];
-    if(typeof arr.set === "function") {
-      arr.set(i, this.value);
-    } else {
-      arr[i] = this.value;
-    }
+    arr[i] = this.value;
     return { newDocument: document, removed };
   },
   move: objOps.move,
